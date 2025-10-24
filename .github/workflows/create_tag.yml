@@ -20,7 +20,7 @@ jobs:
 
       - name: Create and push tag
         env:
-          GITHUB_TOKEN: ${{ secrets.TOKEN_ }}
+          GITHUB_TOKEN: ${{ secrets.TOKEN_GITHUB }}
         run: |
           TAG_NAME="${{ github.event.pull_request.title }}"
           git tag "$TAG_NAME"
